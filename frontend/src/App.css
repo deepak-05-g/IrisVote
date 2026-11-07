@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root { color: #17231e; background: #f3f5ef; font-family: "Manrope", sans-serif; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+a { color: inherit; text-decoration: none; }
+.app-shell { margin: auto; max-width: 1280px; padding: 28px 56px 24px; }
+.topbar { align-items: center; display: flex; justify-content: space-between; }
+.brand { align-items: center; display: flex; font-size: 20px; font-weight: 800; gap: 10px; letter-spacing: -.05em; }
+.brand-mark { align-items: center; background: #d7ec63; border-radius: 50%; display: flex; font-family: "DM Mono", monospace; font-size: 11px; height: 34px; justify-content: center; letter-spacing: -.1em; width: 34px; }
+.nav-links { color: #59635e; display: flex; font-size: 12px; font-weight: 600; gap: 28px; }
+.nav-links a:hover, .text-link:hover { color: #17231e; }
+.hero { align-items: center; display: grid; gap: 8%; grid-template-columns: 1.05fr .95fr; min-height: 570px; padding: 76px 0 90px; }
+.eyebrow { color: #71803c; font-family: "DM Mono", monospace; font-size: 11px; letter-spacing: .12em; margin: 0 0 22px; text-transform: uppercase; }
+h1 { font-size: clamp(48px, 7vw, 88px); letter-spacing: -.08em; line-height: .96; margin: 0; max-width: 680px; }
+.hero-description { color: #65706a; font-size: 16px; line-height: 1.7; margin: 30px 0; max-width: 520px; }
+.hero-actions { align-items: center; display: flex; gap: 25px; }
+.text-link { font-size: 13px; font-weight: 700; }
+.iris-card { background: #183229; border-radius: 3px; color: #e6f0dc; min-height: 330px; overflow: hidden; padding: 30px; position: relative; }
+.iris-glow { background: radial-gradient(circle, #c9ef5f 0, #90c659 12%, #274a3c 43%, transparent 65%); border-radius: 50%; height: 450px; left: 3%; opacity: .9; position: absolute; top: -25%; width: 450px; }
+.iris-card-content { bottom: 30px; display: flex; flex-direction: column; gap: 12px; position: absolute; right: 30px; width: 47%; }
+.iris-card-content span:not(.status-dot) { color: #b6c8af; font-family: "DM Mono", monospace; font-size: 10px; text-transform: uppercase; }
+.status-dot { background: #d7ec63; border-radius: 50%; height: 7px; position: absolute; right: 0; top: 5px; width: 7px; }
+.iris-card-content strong { font-size: 25px; letter-spacing: -.06em; line-height: 1.05; }
+.iris-card-content p { color: #a7b9af; font-size: 12px; line-height: 1.5; margin: 0; }
+.module-section { border-top: 1px solid #dfe4db; padding: 55px 0 80px; }
+h2 { font-size: 38px; letter-spacing: -.07em; line-height: 1.05; margin: 0 0 40px; max-width: 400px; }
+.module-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
+.module-card { background: #e9eee6; min-height: 180px; padding: 23px; }
+.module-number { color: #8b956c; font-family: "DM Mono", monospace; font-size: 11px; }
+.module-card h3 { font-size: 20px; letter-spacing: -.05em; margin: 35px 0 8px; }
+.module-card p { color: #69756e; font-size: 12px; line-height: 1.5; margin: 0; }
+footer { border-top: 1px solid #dfe4db; color: #89918a; display: flex; font-family: "DM Mono", monospace; font-size: 10px; justify-content: space-between; padding-top: 18px; text-transform: uppercase; }
+@media (max-width: 760px) { .app-shell { padding: 24px; } .nav-links { display: none; } .hero { display: block; padding: 80px 0 65px; } .hero-description { font-size: 14px; } .iris-card { margin-top: 45px; } .module-grid { grid-template-columns: 1fr; } footer { gap: 14px; flex-direction: column; } }
