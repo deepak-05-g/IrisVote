@@ -17,7 +17,7 @@ function App() {
         </a>
         <div className="nav-links">
           {modules.map((module) => (
-            <a href={`#${module.label.toLowerCase().replaceAll(" ", "-")}`} key={module.label}>
+            <a href={module.label === "Registration" ? "/register" : `#${module.label.toLowerCase().replaceAll(" ", "-")}`} key={module.label}>
               {module.label}
             </a>
           ))}
@@ -34,7 +34,7 @@ function App() {
             next stages of the prototype.
           </p>
           <div className="hero-actions">
-            <Button>Explore the workspace</Button>
+            <a href="/register"><Button>Explore the workspace</Button></a>
             <a className="text-link" href="#how-it-works">How it works <span aria-hidden="true">→</span></a>
           </div>
         </div>

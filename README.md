@@ -45,6 +45,17 @@ uvicorn app.main:app --reload
 The API is available at `http://localhost:8000`.
 The health endpoint is `GET http://localhost:8000/health`.
 
+Apply database migrations from the `backend` directory:
+
+```powershell
+$env:DATABASE_URL="postgresql+psycopg://irisvote:change_this_for_local_development@localhost:5433/irisvote"
+python -m alembic upgrade head
+```
+
+The registration endpoint is `POST /api/v1/registrations`. It accepts synthetic
+IDs in the `IV-XXXXXX` format and stores new applications with
+`PENDING_REVIEW` status. Duplicate synthetic IDs return `409 Conflict`.
+
 ## Database setup
 
 Copy `.env.example` to `.env` and set a local development password. Start
