@@ -54,7 +54,8 @@ PostgreSQL with:
 docker compose up -d postgres
 ```
 
-The database is configured for local development on port `5432`. Do not place
+The database is configured for local development on host port `5433` (the
+PostgreSQL container still listens on its internal port `5432`). Do not place
 production credentials, real voter information, or biometric images in this
 repository.
 
